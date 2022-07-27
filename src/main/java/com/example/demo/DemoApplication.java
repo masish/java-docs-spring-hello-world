@@ -21,6 +21,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/warmup")
 	String sayYes() {
+		Thread.sleep(50000); 
 		return "Hello Yes!";
 	}
 }
