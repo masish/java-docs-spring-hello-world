@@ -22,13 +22,16 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/warmup")
 	String sayYes() {
-
         try {
             Thread.sleep(50000);
         } catch(InterruptedException e){
             e.printStackTrace();
         }  
-
 		return "Say Yes!!!";
+	}
+
+	@RequestMapping("/Loading")
+	String loading() {
+		return "Laoading...";
 	}
 }
