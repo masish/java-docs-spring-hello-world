@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.lang.Thread; 
 
 @SpringBootApplication
 @RestController
@@ -21,7 +22,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/warmup")
 	String sayYes() {
-		//Thread.sleep(50000); 
-		return "Say Yes!";
+		Thread.sleep(50000); 
+		return "Say Yes!!!";
 	}
 }
